@@ -10,7 +10,7 @@ ReBit is provided as an audio repetition and language-learning tool for iOS.
 
 Users can import audio, split it into short sections, repeat selected sections, create notes and favorites, review learning records, generate on-device transcripts, and optionally synchronize supported data through iCloud.
 
-ReBit is free and may display advertisements. ReBit does not impose a numerical limit on imported audio files, but use is subject to available device and iCloud storage.
+ReBit is free and may display advertisements. The current version does not offer paid features or in-app purchases. ReBit does not impose a numerical limit on imported audio files, but use is subject to available device and iCloud storage.
 
 ## 2. User Content and Audio Rights
 
@@ -78,7 +78,7 @@ ReBit은 iOS용 오디오 반복 재생 및 외국어 학습 도구로 제공됩
 
 사용자는 오디오를 가져와 짧은 구간으로 나누고, 원하는 구간을 반복하고, 메모·즐겨찾기와 학습 기록을 이용하며, 기기 내 스크립트를 생성하고, 지원되는 데이터를 선택적으로 iCloud로 동기화할 수 있습니다.
 
-ReBit은 무료로 제공되며 광고가 표시될 수 있습니다. 앱이 가져오는 음원 개수에 별도의 수량 제한을 두지는 않지만, 기기와 iCloud의 사용 가능한 저장 공간에 따라 실제 이용 가능 용량이 달라질 수 있습니다.
+ReBit은 무료로 제공되며 광고가 표시될 수 있습니다. 현재 버전에는 유료 기능이나 인앱결제가 없습니다. 앱이 가져오는 음원 개수에 별도의 수량 제한을 두지는 않지만, 기기와 iCloud의 사용 가능한 저장 공간에 따라 실제 이용 가능 용량이 달라질 수 있습니다.
 
 ## 2. 사용자 콘텐츠 및 오디오 권리
 

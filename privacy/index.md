@@ -53,7 +53,7 @@ ReBit은 선택한 Whisper 기반 음성 인식 모델을 기기로 다운로드
 
 ## 5. ReBit이 직접 수집하는 정보
 
-ReBit은 이름, 전화번호, 주소, 계정 비밀번호 또는 결제 카드 정보를 직접 요구하거나 수집하지 않습니다.
+ReBit은 이름, 전화번호, 주소, 계정 비밀번호 또는 결제 카드 정보를 직접 요구하거나 수집하지 않습니다. 현재 버전은 인앱결제를 제공하지 않습니다.
 
 사용자가 고객지원을 위해 이메일로 문의하는 경우 이메일 주소, 문의 내용과 사용자가 첨부한 파일이 ReBit에 전달될 수 있습니다. 해당 정보는 문의 응답, 문제 해결과 지원 기록 유지 목적으로 사용됩니다.
 
@@ -178,7 +178,7 @@ Generated transcripts can be edited, copied, or exported as SRT or VTT files. Wh
 
 ## 5. Information We Collect Directly
 
-ReBit does not directly request or collect names, phone numbers, addresses, account passwords, or payment card information.
+ReBit does not directly request or collect names, phone numbers, addresses, account passwords, or payment card information. The current version does not offer in-app purchases.
 
 If a user contacts support by email, ReBit may receive the email address, message contents, and any files attached by the user. This information is used to respond to the inquiry, troubleshoot issues, and maintain support records.
 
