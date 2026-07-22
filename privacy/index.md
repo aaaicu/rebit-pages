@@ -1,6 +1,6 @@
 # 개인정보 처리방침
 
-시행일: 2026년 7월 19일
+시행일: 2026년 7월 23일
 
 본 개인정보 처리방침은 ReBit iOS 앱 사용 시 정보가 어떻게 저장, 처리 및 전송될 수 있는지 설명합니다.
 
@@ -67,6 +67,8 @@ ReBit은 Google AdMob을 통해 광고를 표시할 수 있습니다.
 
 비맞춤형 광고도 광고 제공, 빈도 제한, 집계 보고, 보안 및 부정 사용 방지를 위해 IP 주소, 기기 정보, 앱 정보, 대략적인 위치 또는 광고 관련 식별 정보와 같은 일부 데이터를 처리할 수 있습니다. 이러한 처리는 Google의 정책과 사용자의 지역에 적용되는 법률에 따라 달라질 수 있습니다.
 
+일부 선택적 기능(AI 스크립트 생성, 복습 음원 만들기)은 무료로 이용하기 위해 보상형 광고를 시청해야 할 수 있습니다. 보상형 광고도 위와 동일하게 비맞춤형으로 처리되며 추가 개인정보를 수집하지 않습니다. 광고 시청은 선택 사항이고, 핵심 재생·반복 기능은 광고 없이 이용할 수 있습니다.
+
 광고는 지역, 네트워크 상태, 법적 요구사항과 광고 제공자의 정책에 따라 제한되거나 표시되지 않을 수 있습니다.
 
 ## 7. 정보의 공유 및 서비스 제공자
@@ -125,7 +127,7 @@ Email: aaaaicu@gmail.com
 
 # Privacy Policy
 
-Effective Date: July 19, 2026
+Effective Date: July 23, 2026
 
 This Privacy Policy explains how information may be stored, processed, and transferred when you use the ReBit iOS app.
 
@@ -191,6 +193,8 @@ ReBit may display advertisements through Google AdMob.
 The current version requests non-personalized ads, disables ad personalization, and does not request App Tracking Transparency permission to access the advertising identifier for cross-app tracking.
 
 Non-personalized advertising may still process certain information, such as IP address, device information, app information, approximate location, or advertising-related identifiers, for ad delivery, frequency capping, aggregated reporting, security, and fraud prevention. Processing may vary according to Google's policies and the laws applicable in the user's region.
+
+Some optional features (AI transcript generation and review-audio creation) may require watching a rewarded ad to use them for free. Such rewarded ads are served non-personalized as described above and collect no additional personal information. Watching is optional, and core playback and repetition features are available without ads.
 
 Advertising may be limited or unavailable depending on region, network conditions, legal requirements, and the advertising provider's policies.
 
