@@ -6,7 +6,7 @@
 
 ## 1. 앱 개요
 
-ReBit은 사용자가 가져온 오디오를 짧은 구간으로 나누어 반복 재생하고, 메모·즐겨찾기·학습 기록과 AI 스크립트를 이용해 복습할 수 있도록 돕는 iOS 앱입니다.
+ReBit은 사용자가 가져온 오디오를 짧은 구간으로 나누어 반복 재생하고, 메모·즐겨찾기·학습 기록과 AI 스크립트를 이용해 복습할 수 있도록 돕는 iOS 앱입니다. 사용자는 청크별로 원문을 듣고 따라 말하는 연습을 녹음할 수 있습니다.
 
 ReBit은 회원가입을 요구하지 않으며, 별도의 ReBit 계정을 만들지 않고 사용할 수 있습니다.
 
@@ -19,12 +19,23 @@ ReBit은 다음과 같은 데이터를 기기에 저장할 수 있습니다.
 - 생성 또는 수정된 스크립트
 - 메모, 즐겨찾기와 폴더
 - 반복 횟수와 학습 기록
+- 사용자가 녹음한 따라 말하기 음성
 - 재생 위치 및 재생·학습 설정
 - 다운로드한 음성 인식 모델
 
 다운로드한 음성 인식 모델은 다시 다운로드할 수 있는 파일이며 iCloud 동기화 대상에 포함되지 않습니다.
 
-## 3. iCloud 동기화
+## 3. 마이크 녹음(따라 말하기)
+
+ReBit은 사용자가 청크별로 원문을 듣고 따라 말하는 연습을 위해 직접 녹음을 시작하는 경우에만 마이크를 사용합니다. 앱을 실행하거나 화면을 여는 것만으로 마이크가 활성화되지 않으며, 사용자가 최초로 녹음을 시작할 때 iOS의 마이크 권한을 요청합니다.
+
+녹음된 음성은 기기에 저장되며, iCloud 동기화가 활성화된 경우 사용자 본인의 개인 iCloud 계정에도 저장되어 같은 Apple 계정을 사용하는 기기 사이에서 동기화될 수 있습니다. ReBit은 이 녹음을 ReBit이 운영하는 서버로 전송하지 않으며, ReBit 운영자나 제3자가 해당 녹음에 접근할 수 없습니다.
+
+사용자는 청크별로 녹음을 다시 하거나 개별적으로 삭제할 수 있습니다. 음원을 삭제하면 그 음원에 속한 모든 녹음도 함께 삭제됩니다. 청크 나누기 기준을 바꾸면(다시 나누기) 녹음 자체는 유지되지만 청크별 완료 표시는 새 구간에 맞춰 초기화됩니다.
+
+사용자는 완료한 녹음 중 원하는 것을 골라 순서대로 이어붙여 하나의 파일("내 목소리 복습파일")로 미리 듣거나 공유할 수 있습니다. 이 복습파일은 사용자가 직접 공유를 선택하기 전까지 기기를 벗어나지 않으며, ReBit 라이브러리에 별도 음원으로 저장되지 않습니다.
+
+## 4. iCloud 동기화
 
 현재 버전에서는 iCloud 동기화가 기본적으로 활성화되며 사용자는 ReBit 설정에서 끌 수 있습니다. 설정 변경은 앱을 다시 열 때 적용됩니다.
 
@@ -35,13 +46,14 @@ ReBit은 다음과 같은 데이터를 기기에 저장할 수 있습니다.
 - 메모와 즐겨찾기
 - 폴더 및 라이브러리 정보
 - 반복 횟수와 학습 기록
+- 사용자가 녹음한 따라 말하기 음성
 - 재생 위치
 
 ReBit은 iCloud 동기화를 위해 Apple의 iCloud 및 CloudKit 서비스를 사용합니다. ReBit은 해당 데이터를 ReBit이 운영하는 별도 서버에 저장하지 않습니다. iCloud의 이용과 데이터 처리는 Apple의 약관 및 개인정보 보호정책의 적용을 받을 수 있습니다.
 
 사용자가 iCloud 동기화를 끄면 앱은 다음 실행부터 로컬 저장 방식으로 동작합니다. 이미 iCloud에 저장된 데이터는 앱에서 동기화를 끄거나 기기에서 앱을 삭제하는 것만으로 즉시 모두 삭제되지 않을 수 있습니다.
 
-## 4. AI 스크립트 생성
+## 5. AI 스크립트 생성
 
 AI 스크립트 생성은 사용자가 직접 기능을 실행할 때만 시작됩니다.
 
@@ -51,7 +63,7 @@ ReBit은 선택한 Whisper 기반 음성 인식 모델을 기기로 다운로드
 
 생성된 스크립트는 사용자가 직접 수정·복사하거나 SRT 또는 VTT 파일로 내보낼 수 있습니다. 사용자가 공유 또는 내보내기를 선택한 경우 데이터는 사용자가 선택한 앱이나 서비스로 전달될 수 있습니다.
 
-## 5. ReBit이 직접 수집하는 정보
+## 6. ReBit이 직접 수집하는 정보
 
 ReBit은 이름, 전화번호, 주소, 계정 비밀번호 또는 결제 카드 정보를 직접 요구하거나 수집하지 않습니다. 현재 버전은 인앱결제를 제공하지 않습니다.
 
@@ -59,7 +71,7 @@ ReBit은 이름, 전화번호, 주소, 계정 비밀번호 또는 결제 카드 
 
 고객지원 이메일: aaaaicu@gmail.com
 
-## 6. 광고
+## 7. 광고
 
 ReBit은 Google AdMob을 통해 광고를 표시할 수 있습니다.
 
@@ -67,11 +79,11 @@ ReBit은 Google AdMob을 통해 광고를 표시할 수 있습니다.
 
 비맞춤형 광고도 광고 제공, 빈도 제한, 집계 보고, 보안 및 부정 사용 방지를 위해 IP 주소, 기기 정보, 앱 정보, 대략적인 위치 또는 광고 관련 식별 정보와 같은 일부 데이터를 처리할 수 있습니다. 이러한 처리는 Google의 정책과 사용자의 지역에 적용되는 법률에 따라 달라질 수 있습니다.
 
-일부 선택적 기능(AI 스크립트 생성, 복습 음원 만들기)은 무료로 이용하기 위해 보상형 광고를 시청해야 할 수 있습니다. 보상형 광고도 위와 동일하게 비맞춤형으로 처리되며 추가 개인정보를 수집하지 않습니다. 광고 시청은 선택 사항이고, 핵심 재생·반복 기능은 광고 없이 이용할 수 있습니다.
+일부 선택적 기능(AI 스크립트 생성, 복습 음원 만들기, 내 목소리 복습파일 만들기)은 무료로 이용하기 위해 보상형 광고를 시청해야 할 수 있습니다. 보상형 광고도 위와 동일하게 비맞춤형으로 처리되며 추가 개인정보를 수집하지 않습니다. 광고 시청은 선택 사항이고, 핵심 재생·반복·녹음 기능은 광고 없이 이용할 수 있습니다.
 
 광고는 지역, 네트워크 상태, 법적 요구사항과 광고 제공자의 정책에 따라 제한되거나 표시되지 않을 수 있습니다.
 
-## 7. 정보의 공유 및 서비스 제공자
+## 8. 정보의 공유 및 서비스 제공자
 
 ReBit은 개인정보를 판매하지 않습니다.
 
@@ -80,44 +92,45 @@ ReBit은 개인정보를 판매하지 않습니다.
 - Apple: App Store, iCloud 및 CloudKit 제공
 - Google: AdMob 광고 제공, 보고와 부정 사용 방지
 - 음성 인식 모델 호스팅 서비스: 사용자가 선택한 모델 파일 다운로드
-- 사용자가 선택한 공유 대상: 스크립트, 자막 파일 또는 오디오 클립을 공유·내보내는 경우
+- 사용자가 선택한 공유 대상: 스크립트, 자막 파일, 오디오 클립 또는 녹음·복습파일을 공유·내보내는 경우
 
 각 서비스 제공자의 정보 처리는 해당 제공자의 약관과 개인정보 보호정책의 적용을 받을 수 있습니다.
 
-## 8. 보관 및 삭제
+## 9. 보관 및 삭제
 
 로컬 데이터는 사용자가 앱 안에서 항목을 삭제하거나 기기에서 앱을 삭제할 때까지 기기에 저장될 수 있습니다.
 
-ReBit 안에서 음원을 삭제하면 관련 청크, 스크립트, 메모, 즐겨찾기와 학습 데이터도 함께 삭제됩니다. iCloud 동기화가 활성화된 경우 삭제 내용이 iCloud와 다른 기기에 반영될 수 있습니다.
+ReBit 안에서 음원을 삭제하면 관련 청크, 스크립트, 메모, 즐겨찾기, 학습 데이터와 그 음원에 속한 모든 따라 말하기 녹음도 함께 삭제됩니다. iCloud 동기화가 활성화된 경우 삭제 내용이 iCloud와 다른 기기에 반영될 수 있습니다.
 
 기기에서 앱을 삭제하면 해당 기기의 로컬 데이터는 제거되지만, 이전에 iCloud에 동기화된 데이터는 iCloud에 남아 있을 수 있습니다. 동기화된 데이터는 iCloud 동기화가 활성화된 ReBit에서 항목을 삭제하거나 Apple의 iCloud 저장 공간 관리 기능을 통해 관리할 수 있습니다.
 
-다운로드한 음성 인식 모델은 ReBit 설정에서 개별적으로 삭제할 수 있습니다.
+다운로드한 음성 인식 모델은 ReBit 설정에서 개별적으로 삭제할 수 있습니다. 따라 말하기 녹음은 청크별로 개별 삭제할 수 있습니다.
 
 고객지원 이메일은 문의 응답, 지원 기록 유지 또는 법적 의무 준수에 필요한 기간 동안 보관될 수 있습니다.
 
-## 9. 사용자의 선택권
+## 10. 사용자의 선택권
 
 사용자는 다음과 같은 선택을 할 수 있습니다.
 
 - ReBit 설정에서 iCloud 동기화 켜기 또는 끄기
 - 앱 안에서 오디오와 관련 학습 데이터 삭제
+- 따라 말하기 녹음을 하지 않거나, 이미 한 녹음을 개별적으로 삭제
 - 다운로드한 음성 인식 모델 삭제
 - AI 스크립트 생성을 실행하지 않기
-- 스크립트 또는 파일 공유 여부 직접 선택
+- 스크립트, 파일, 녹음 또는 복습파일 공유 여부 직접 선택
 - 기기에서 앱 삭제
 
 개인정보 관련 문의는 aaaaicu@gmail.com 으로 연락할 수 있습니다.
 
-## 10. 아동
+## 11. 아동
 
-ReBit은 아동의 개인정보를 의도적으로 수집하기 위한 서비스가 아니며 회원가입을 요구하지 않습니다. 보호자는 아동의 앱 사용과 가져오는 콘텐츠를 적절히 관리해야 합니다.
+ReBit은 아동의 개인정보를 의도적으로 수집하기 위한 서비스가 아니며 회원가입을 요구하지 않습니다. 보호자는 아동의 앱 사용, 마이크 녹음과 가져오는 콘텐츠를 적절히 관리해야 합니다.
 
-## 11. 처리방침 변경
+## 12. 처리방침 변경
 
 앱 기능, 데이터 처리 방식 또는 관련 법령이 변경되는 경우 본 개인정보 처리방침이 업데이트될 수 있습니다. 변경 사항은 새로운 시행일과 함께 이 페이지에 게시됩니다.
 
-## 12. 문의
+## 13. 문의
 
 본 개인정보 처리방침에 대한 문의는 아래 이메일로 연락해 주세요.
 
@@ -133,7 +146,7 @@ This Privacy Policy explains how information may be stored, processed, and trans
 
 ## 1. App Overview
 
-ReBit is an iOS app that helps users split imported audio into short sections for repeated playback and review it with notes, favorites, learning records, and AI-generated transcripts.
+ReBit is an iOS app that helps users split imported audio into short sections for repeated playback and review it with notes, favorites, learning records, and AI-generated transcripts. Users can record themselves shadowing (listening to and repeating) each section.
 
 ReBit does not require registration or a separate ReBit account.
 
@@ -146,12 +159,23 @@ ReBit may store the following data on the device:
 - Generated or edited transcripts
 - Notes, favorites, and folders
 - Repetition counts and learning records
+- User-recorded shadowing audio
 - Playback positions and playback or learning settings
 - Downloaded speech-recognition models
 
 Downloaded speech-recognition models are re-downloadable files and are not included in iCloud synchronization.
 
-## 3. iCloud Synchronization
+## 3. Microphone Recording (Shadowing)
+
+ReBit uses the microphone only when the user chooses to start a recording while practicing shadowing (listening to a chunk and repeating it aloud). The microphone is never activated simply by opening the app or a screen; iOS requests microphone permission the first time the user starts a recording.
+
+Recorded audio is stored on the device and, if iCloud sync is enabled, in the user's own private iCloud account, where it may be synchronized across devices signed in with the same Apple Account. ReBit does not transmit these recordings to a server it operates, and no third party — including ReBit's operator — can access them.
+
+Users can re-record or individually delete a chunk's recording at any time. Deleting an audio source also deletes all of its recordings. Changing the chunking criteria (re-chunking) keeps the recordings themselves but resets each chunk's completion mark to match the new boundaries.
+
+Users can select any of their completed recordings and combine them, in order, into a single file (a "my-voice review file") to preview or share. This file never leaves the device until the user explicitly chooses to share it, and it is not saved as a separate library source in ReBit.
+
+## 4. iCloud Synchronization
 
 In the current version, iCloud sync is enabled by default and can be turned off in ReBit Settings. Changes take effect after the app is reopened.
 
@@ -162,13 +186,14 @@ When sync is enabled, the following data may be stored in the user's private iCl
 - Notes and favorites
 - Folders and library information
 - Repetition counts and learning records
+- User-recorded shadowing audio
 - Playback positions
 
 ReBit uses Apple's iCloud and CloudKit services for synchronization. ReBit does not store this data on a separate server operated by ReBit. The use of iCloud and related data processing may also be governed by Apple's terms and privacy policies.
 
 When iCloud sync is turned off, the app uses local storage beginning with the next launch. Data already stored in iCloud may not be immediately removed merely by turning off sync or uninstalling the app from a device.
 
-## 4. AI Transcript Generation
+## 5. AI Transcript Generation
 
 AI transcript generation begins only when the user chooses to run the feature.
 
@@ -178,7 +203,7 @@ Downloading a speech-recognition model requires network communication. The model
 
 Generated transcripts can be edited, copied, or exported as SRT or VTT files. When the user chooses to share or export content, the data may be transferred to the app or service selected by the user.
 
-## 5. Information We Collect Directly
+## 6. Information We Collect Directly
 
 ReBit does not directly request or collect names, phone numbers, addresses, account passwords, or payment card information. The current version does not offer in-app purchases.
 
@@ -186,7 +211,7 @@ If a user contacts support by email, ReBit may receive the email address, messag
 
 Support email: aaaaicu@gmail.com
 
-## 6. Advertising
+## 7. Advertising
 
 ReBit may display advertisements through Google AdMob.
 
@@ -194,11 +219,11 @@ The current version requests non-personalized ads, disables ad personalization, 
 
 Non-personalized advertising may still process certain information, such as IP address, device information, app information, approximate location, or advertising-related identifiers, for ad delivery, frequency capping, aggregated reporting, security, and fraud prevention. Processing may vary according to Google's policies and the laws applicable in the user's region.
 
-Some optional features (AI transcript generation and review-audio creation) may require watching a rewarded ad to use them for free. Such rewarded ads are served non-personalized as described above and collect no additional personal information. Watching is optional, and core playback and repetition features are available without ads.
+Some optional features (AI transcript generation, review-audio creation, and my-voice review file creation) may require watching a rewarded ad to use them for free. Such rewarded ads are served non-personalized as described above and collect no additional personal information. Watching is optional, and core playback, repetition, and recording features are available without ads.
 
 Advertising may be limited or unavailable depending on region, network conditions, legal requirements, and the advertising provider's policies.
 
-## 7. Sharing and Service Providers
+## 8. Sharing and Service Providers
 
 ReBit does not sell personal information.
 
@@ -207,44 +232,45 @@ The following service providers may process information as needed to provide app
 - Apple: App Store, iCloud, and CloudKit services
 - Google: AdMob advertising, reporting, and fraud prevention
 - Speech-recognition model hosting service: downloading a model selected by the user
-- User-selected sharing destinations: when the user shares or exports transcripts, subtitle files, or audio clips
+- User-selected sharing destinations: when the user shares or exports transcripts, subtitle files, audio clips, recordings, or review files
 
 Each provider's processing may be governed by its own terms and privacy policies.
 
-## 8. Retention and Deletion
+## 9. Retention and Deletion
 
 Local data may remain on the device until the user deletes items inside the app or uninstalls the app from that device.
 
-Deleting an audio item inside ReBit also deletes its related chunks, transcripts, notes, favorites, and learning data. When iCloud sync is active, the deletion may be reflected in iCloud and on other devices.
+Deleting an audio item inside ReBit also deletes its related chunks, transcripts, notes, favorites, learning data, and any shadowing recordings belonging to that item. When iCloud sync is active, the deletion may be reflected in iCloud and on other devices.
 
 Uninstalling ReBit removes local data from that device, but data previously synchronized to iCloud may remain in iCloud. Synced data can be managed by deleting items in ReBit while iCloud sync is active or through Apple's iCloud storage management tools.
 
-Downloaded speech-recognition models can be deleted individually from ReBit Settings.
+Downloaded speech-recognition models can be deleted individually from ReBit Settings. Shadowing recordings can be deleted individually per chunk.
 
 Support emails may be retained as long as needed to respond to the inquiry, maintain support records, or comply with legal obligations.
 
-## 9. User Choices
+## 10. User Choices
 
 Users can choose to:
 
 - Turn iCloud sync on or off in ReBit Settings
 - Delete audio and related learning data inside the app
+- Not record shadowing audio, or delete an existing recording individually
 - Delete downloaded speech-recognition models
 - Not run AI transcript generation
-- Choose whether to share transcripts or files
+- Choose whether to share transcripts, files, recordings, or review files
 - Uninstall the app from the device
 
 Privacy questions can be sent to aaaaicu@gmail.com.
 
-## 10. Children
+## 11. Children
 
-ReBit is not intended to intentionally collect personal information from children and does not require registration. Parents or guardians should appropriately supervise the app's use and the content imported by children.
+ReBit is not intended to intentionally collect personal information from children and does not require registration. Parents or guardians should appropriately supervise the app's use, microphone recording, and the content imported by children.
 
-## 11. Changes to This Policy
+## 12. Changes to This Policy
 
 This Privacy Policy may be updated when app features, data practices, or applicable laws change. Updates will be posted on this page with a revised effective date.
 
-## 12. Contact
+## 13. Contact
 
 For questions about this Privacy Policy, contact:
 
