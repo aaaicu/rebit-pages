@@ -1,12 +1,12 @@
 # 개인정보 처리방침
 
-시행일: 2026년 7월 23일
+시행일: 2026년 8월 1일
 
 본 개인정보 처리방침은 ReBit iOS 앱 사용 시 정보가 어떻게 저장, 처리 및 전송될 수 있는지 설명합니다.
 
 ## 1. 앱 개요
 
-ReBit은 사용자가 가져온 오디오를 짧은 구간으로 나누어 반복 재생하고, 메모·즐겨찾기·학습 기록과 AI 스크립트를 이용해 복습할 수 있도록 돕는 iOS 앱입니다. 사용자는 청크별로 원문을 듣고 따라 말하는 연습을 녹음할 수 있습니다.
+ReBit은 사용자가 가져온 오디오 또는 영상을 짧은 구간으로 나누어 반복 재생하고, 메모·즐겨찾기·학습 기록과 AI 스크립트를 이용해 복습할 수 있도록 돕는 iOS 앱입니다. 영상을 가져오면 앱이 기기 안에서 소리를 별도 파일로 추출해 오디오와 동일하게 처리하며, 화면에는 영상이 재생됩니다. 사용자는 청크별로 원문을 듣고 따라 말하는 연습을 녹음할 수 있습니다.
 
 ReBit은 회원가입을 요구하지 않으며, 별도의 ReBit 계정을 만들지 않고 사용할 수 있습니다.
 
@@ -15,7 +15,9 @@ ReBit은 회원가입을 요구하지 않으며, 별도의 ReBit 계정을 만�
 ReBit은 다음과 같은 데이터를 기기에 저장할 수 있습니다.
 
 - 사용자가 가져온 오디오 파일
-- 오디오의 청크 및 파형 정보
+- 사용자가 가져온 영상 파일
+- 영상에서 기기 안에서 추출한 소리 파일
+- 청크 및 파형 정보
 - 생성 또는 수정된 스크립트
 - 메모, 즐겨찾기와 폴더
 - 반복 횟수와 학습 기록
@@ -24,6 +26,10 @@ ReBit은 다음과 같은 데이터를 기기에 저장할 수 있습니다.
 - 다운로드한 음성 인식 모델
 
 다운로드한 음성 인식 모델은 다시 다운로드할 수 있는 파일이며 iCloud 동기화 대상에 포함되지 않습니다.
+
+사용자는 앱 안의 파일 선택 화면 외에 다른 앱의 공유 기능을 통해서도 파일을 ReBit으로 보낼 수 있습니다. 어느 경로든 ReBit은 파일의 사본을 앱 저장 공간에 만들며, 원본 파일을 수정하지 않습니다.
+
+일부 영상 형식(예: MKV)은 iOS가 바로 재생하지 못하므로, ReBit은 기기 안에서 영상을 다시 인코딩하지 않고 컨테이너 형식만 바꾸어 저장합니다. 이 변환은 전부 기기에서 이루어지며 파일이 외부로 전송되지 않습니다.
 
 ## 3. 마이크 녹음(따라 말하기)
 
@@ -42,12 +48,15 @@ ReBit은 사용자가 청크별로 원문을 듣고 따라 말하는 연습을 �
 동기화가 활성화되면 다음 데이터가 사용자의 개인 iCloud 계정에 저장되어 같은 Apple 계정을 사용하는 기기 사이에서 동기화될 수 있습니다.
 
 - 가져온 오디오
+- 가져온 영상(자료별로 사용자가 켠 경우에만)
 - 청크 및 스크립트
 - 메모와 즐겨찾기
 - 폴더 및 라이브러리 정보
 - 반복 횟수와 학습 기록
 - 사용자가 녹음한 따라 말하기 음성
 - 재생 위치
+
+영상은 오디오보다 용량이 훨씬 크기 때문에, 영상의 동기화 여부는 전체 설정이 아니라 자료마다 따로 정합니다. 각 자료의 정보 화면에서 '영상까지 동기화', '소리만 동기화', '동기화 안 함' 중에서 선택할 수 있으며, 기본값은 소리만 동기화입니다. 즉 사용자가 명시적으로 켜지 않는 한 영상 파일 자체는 기기를 벗어나지 않습니다.
 
 ReBit은 iCloud 동기화를 위해 Apple의 iCloud 및 CloudKit 서비스를 사용합니다. ReBit은 해당 데이터를 ReBit이 운영하는 별도 서버에 저장하지 않습니다. iCloud의 이용과 데이터 처리는 Apple의 약관 및 개인정보 보호정책의 적용을 받을 수 있습니다.
 
@@ -79,6 +88,13 @@ ReBit은 Google AdMob을 통해 광고를 표시할 수 있습니다.
 
 비맞춤형 광고도 광고 제공, 빈도 제한, 집계 보고, 보안 및 부정 사용 방지를 위해 IP 주소, 기기 정보, 앱 정보, 대략적인 위치 또는 광고 관련 식별 정보와 같은 일부 데이터를 처리할 수 있습니다. 이러한 처리는 Google의 정책과 사용자의 지역에 적용되는 법률에 따라 달라질 수 있습니다.
 
+현재 버전에서 광고는 다음 형태로 표시될 수 있습니다.
+
+- 배너 광고: 라이브러리, 학습 기록, 플레이어의 청크 목록, 복습 음원 만들기 화면
+- 앱 시작 광고: 앱을 다시 열 때 표시될 수 있으며, 최소 4시간 간격으로 제한되고 최초 실행에서는 표시되지 않습니다
+- 전면 광고: 영상을 실제로 재생한 시간이 누적 20분에 도달하면 표시될 수 있습니다. 누적 시간은 영상이 재생 중일 때만 늘어나고 기기에만 저장되며, 영상을 가져오지 않은 사용자에게는 표시되지 않습니다. 녹음 중이거나 구간 반복 도중에는 표시되지 않습니다
+- 보상형 광고: 아래 선택적 기능을 무료로 이용할 때
+
 일부 선택적 기능(AI 스크립트 생성, 복습 음원 만들기, 내 목소리 복습파일 만들기)은 무료로 이용하기 위해 보상형 광고를 시청해야 할 수 있습니다. 보상형 광고도 위와 동일하게 비맞춤형으로 처리되며 추가 개인정보를 수집하지 않습니다. 광고 시청은 선택 사항이고, 핵심 재생·반복·녹음 기능은 광고 없이 이용할 수 있습니다.
 
 광고는 지역, 네트워크 상태, 법적 요구사항과 광고 제공자의 정책에 따라 제한되거나 표시되지 않을 수 있습니다.
@@ -100,7 +116,7 @@ ReBit은 개인정보를 판매하지 않습니다.
 
 로컬 데이터는 사용자가 앱 안에서 항목을 삭제하거나 기기에서 앱을 삭제할 때까지 기기에 저장될 수 있습니다.
 
-ReBit 안에서 음원을 삭제하면 관련 청크, 스크립트, 메모, 즐겨찾기, 학습 데이터와 그 음원에 속한 모든 따라 말하기 녹음도 함께 삭제됩니다. iCloud 동기화가 활성화된 경우 삭제 내용이 iCloud와 다른 기기에 반영될 수 있습니다.
+ReBit 안에서 자료를 삭제하면 관련 청크, 스크립트, 메모, 즐겨찾기, 학습 데이터와 그 자료에 속한 모든 따라 말하기 녹음이 함께 삭제되며, 영상 자료의 경우 영상 파일과 그 영상에서 추출한 소리 파일도 함께 삭제됩니다. iCloud 동기화가 활성화된 경우 삭제 내용이 iCloud와 다른 기기에 반영될 수 있습니다.
 
 기기에서 앱을 삭제하면 해당 기기의 로컬 데이터는 제거되지만, 이전에 iCloud에 동기화된 데이터는 iCloud에 남아 있을 수 있습니다. 동기화된 데이터는 iCloud 동기화가 활성화된 ReBit에서 항목을 삭제하거나 Apple의 iCloud 저장 공간 관리 기능을 통해 관리할 수 있습니다.
 
@@ -113,6 +129,7 @@ ReBit 안에서 음원을 삭제하면 관련 청크, 스크립트, 메모, 즐�
 사용자는 다음과 같은 선택을 할 수 있습니다.
 
 - ReBit 설정에서 iCloud 동기화 켜기 또는 끄기
+- 자료마다 영상까지 동기화할지, 소리만 동기화할지, 동기화하지 않을지 선택
 - 앱 안에서 오디오와 관련 학습 데이터 삭제
 - 따라 말하기 녹음을 하지 않거나, 이미 한 녹음을 개별적으로 삭제
 - 다운로드한 음성 인식 모델 삭제
@@ -140,13 +157,13 @@ Email: aaaaicu@gmail.com
 
 # Privacy Policy
 
-Effective Date: July 23, 2026
+Effective Date: August 1, 2026
 
 This Privacy Policy explains how information may be stored, processed, and transferred when you use the ReBit iOS app.
 
 ## 1. App Overview
 
-ReBit is an iOS app that helps users split imported audio into short sections for repeated playback and review it with notes, favorites, learning records, and AI-generated transcripts. Users can record themselves shadowing (listening to and repeating) each section.
+ReBit is an iOS app that helps users split imported audio or video into short sections for repeated playback and review it with notes, favorites, learning records, and AI-generated transcripts. When a video is imported, the app extracts its audio into a separate file on the device and treats it exactly like an audio source, while the picture plays on screen. Users can record themselves shadowing (listening to and repeating) each section.
 
 ReBit does not require registration or a separate ReBit account.
 
@@ -155,7 +172,9 @@ ReBit does not require registration or a separate ReBit account.
 ReBit may store the following data on the device:
 
 - Audio files imported by the user
-- Audio chunk and waveform information
+- Video files imported by the user
+- Audio extracted from a video on the device
+- Chunk and waveform information
 - Generated or edited transcripts
 - Notes, favorites, and folders
 - Repetition counts and learning records
@@ -164,6 +183,10 @@ ReBit may store the following data on the device:
 - Downloaded speech-recognition models
 
 Downloaded speech-recognition models are re-downloadable files and are not included in iCloud synchronization.
+
+In addition to the in-app file picker, users can send files to ReBit through another app's share sheet. In either case ReBit makes a copy in its own storage and does not modify the original file.
+
+Some video formats (such as MKV) cannot be played directly by iOS. ReBit changes only the container format on the device, without re-encoding the video, and stores the result. This conversion happens entirely on the device and no file is transmitted anywhere.
 
 ## 3. Microphone Recording (Shadowing)
 
@@ -182,12 +205,15 @@ In the current version, iCloud sync is enabled by default and can be turned off 
 When sync is enabled, the following data may be stored in the user's private iCloud account and synchronized across devices using the same Apple Account:
 
 - Imported audio
+- Imported video (only when the user enables it for that source)
 - Chunks and transcripts
 - Notes and favorites
 - Folders and library information
 - Repetition counts and learning records
 - User-recorded shadowing audio
 - Playback positions
+
+Because video is far larger than audio, whether a video is synchronized is decided per source rather than by a single global setting. Each source's info screen offers "sync video too", "sync audio only", or "do not sync", and the default is audio only. In other words, the video file itself does not leave the device unless the user explicitly enables it.
 
 ReBit uses Apple's iCloud and CloudKit services for synchronization. ReBit does not store this data on a separate server operated by ReBit. The use of iCloud and related data processing may also be governed by Apple's terms and privacy policies.
 
@@ -219,6 +245,13 @@ The current version requests non-personalized ads, disables ad personalization, 
 
 Non-personalized advertising may still process certain information, such as IP address, device information, app information, approximate location, or advertising-related identifiers, for ad delivery, frequency capping, aggregated reporting, security, and fraud prevention. Processing may vary according to Google's policies and the laws applicable in the user's region.
 
+In the current version, ads may appear in the following forms:
+
+- Banner ads: Library, Stats, inline in the player's chunk list, and the review-audio build screen
+- App-open ads: may appear when reopening the app, limited to once every four hours and never on first launch
+- Interstitial ads: may appear once 20 minutes of video has actually been played. That total accrues only while a video is playing, is stored only on the device, and never appears for users who import no video. It is not shown during a recording or in the middle of a repeat
+- Rewarded ads: for the optional features described below
+
 Some optional features (AI transcript generation, review-audio creation, and my-voice review file creation) may require watching a rewarded ad to use them for free. Such rewarded ads are served non-personalized as described above and collect no additional personal information. Watching is optional, and core playback, repetition, and recording features are available without ads.
 
 Advertising may be limited or unavailable depending on region, network conditions, legal requirements, and the advertising provider's policies.
@@ -240,7 +273,7 @@ Each provider's processing may be governed by its own terms and privacy policies
 
 Local data may remain on the device until the user deletes items inside the app or uninstalls the app from that device.
 
-Deleting an audio item inside ReBit also deletes its related chunks, transcripts, notes, favorites, learning data, and any shadowing recordings belonging to that item. When iCloud sync is active, the deletion may be reflected in iCloud and on other devices.
+Deleting a source inside ReBit also deletes its related chunks, transcripts, notes, favorites, learning data, and any shadowing recordings belonging to it. For a video source, the video file and the audio extracted from it are deleted as well. When iCloud sync is active, the deletion may be reflected in iCloud and on other devices.
 
 Uninstalling ReBit removes local data from that device, but data previously synchronized to iCloud may remain in iCloud. Synced data can be managed by deleting items in ReBit while iCloud sync is active or through Apple's iCloud storage management tools.
 
@@ -253,6 +286,7 @@ Support emails may be retained as long as needed to respond to the inquiry, main
 Users can choose to:
 
 - Turn iCloud sync on or off in ReBit Settings
+- Choose, per source, whether to sync the video too, only its audio, or nothing
 - Delete audio and related learning data inside the app
 - Not record shadowing audio, or delete an existing recording individually
 - Delete downloaded speech-recognition models
